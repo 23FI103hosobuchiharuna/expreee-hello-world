@@ -28,11 +28,29 @@
         padding: 10px;
         border: 1px solid #ccc;
       }
-      .submit {
+      .send {
         padding: 10px;
         border: 1px solid #e3e3e3;
         background: #a8c3ff;
         cursor: pointer;
+        margin-left: 5px;
+        color: black;
+      }
+      .send[data-color="white"] {
+        background-color: white;
+        color: black;
+      }
+      .send[data-color="yellow"] {
+        background-color: yellow;
+        color: black;
+      }
+      .send[data-color="cyan"] {
+        background-color: cyan;
+        color: black;
+      }
+      .send[data-color="pink"] {
+        background-color: pink;
+        color: black;
       }
     </style>
   </head>
@@ -62,6 +80,8 @@
 
         const canvas = document.getElementById('canvas')
         const ctx = canvas.getContext('2d')
+        ctx.strokeStyle = 'white'; 
+        ctx.lineWidth = 2;
 
         let drawing = false
 
