@@ -133,17 +133,17 @@
             // const { id, text } = msg
             // const messageList = document.querySelector('.messages')
             // const li = document.createElement('li')
-            // if (id === myId) {
-            //   li.textContent = `(${id})自分:` + text
-            // } else {
-            //   li.textContent = id + ': ' + text
-            // }
+            
             // messageList.appendChild(li)
             const { id, text, color } = msg
             const messageList = document.querySelector('.messages')
             const li = document.createElement('li')
-            li.textContent = (id === myId ? `(${id})自分:` : `${id}: `) + text
-            li.style.color = color || 'black' // 色付きで表示
+            if (id === myId) {
+              li.textContent = `(${id})自分:` + text
+            } else {
+              li.textContent = id + ': ' + text
+            }
+            li.style.color = color || 'black' 
             messageList.appendChild(li)
           }
         }
